@@ -38,7 +38,7 @@ jobs:
 
       - name: Build and Push Docker Image
         env:
-          GITHUB_SHA_SHORT: ${{ github.sha | slice(0, 8) }}
+          GITHUB_SHA_SHORT: ${{github.sha}}
         run: |
           docker build -t 303224671331.dkr.ecr.ap-southeast-1.amazonaws.com/nodejstes:${GITHUB_SHA_SHORT} ./app
           docker tag ${{ github.sha }} 303224671331.dkr.ecr.ap-southeast-1.amazonaws.com/nodejstes:${{ github.sha }}
