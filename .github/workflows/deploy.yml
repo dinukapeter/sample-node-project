@@ -40,9 +40,9 @@ jobs:
         env:
           GITHUB_SHA_SHORT: ${{github.sha}}
         run: |
-          docker build -t 303224671331.dkr.ecr.ap-southeast-1.amazonaws.com/nodejstes:${GITHUB_SHA_SHORT} ./app
-          docker tag ${{ github.sha }} 303224671331.dkr.ecr.ap-southeast-1.amazonaws.com/nodejstes:${{ github.sha }}
-          docker push 303224671331.dkr.ecr.ap-southeast-1.amazonaws.com/nodejstes:${GITHUB_SHA_SHORT}
+          docker build -t nodejstest .
+          docker tag ${{ github.sha }}:latest 303224671331.dkr.ecr.ap-southeast-1.amazonaws.com/nodejstest:latest
+          docker push 303224671331.dkr.ecr.ap-southeast-1.amazonaws.com/nodejstest:latest
 
       # - name: Push Docker Image to ECR
       #   run: |
