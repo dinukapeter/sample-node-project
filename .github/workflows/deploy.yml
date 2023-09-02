@@ -1,3 +1,8 @@
+# AmazonEC2ContainerRegistryFullAccess
+# AmazonECS_FullAccess
+# AmazonElasticContainerRegistryPublicFullAccess
+# AmazonS3FullAccess
+
 name: Deploy to Amazon ECS
 
 on:
